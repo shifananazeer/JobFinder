@@ -1,18 +1,72 @@
-# React + Vite
+## JobFinder - Job Listing Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+JobFinder is a modern and responsive job listing application built using React. It allows users to browse available jobs, view details, and explore opportunities easily.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Features
+ Homepage with Hero Section
+ Job Listings (API Integration)
+ About Page
+ Loading Spinner (Reusable Component)
+ Fully Responsive Design
+ Clean Component Structure
+ Environment-based API configuration
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
+React.js
+React Router DOM
+Custom CSS
+Vite
+JavaScript (ES6+)
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+## Project Structure
+src/
+ ├── components/
+ │    ├── navbar
+ │    │    ├──Navbar.jsx
+ │    │    ├──Navbar.css
+ │    ├── jobCard
+ │    │     ├──JobCard.jsx
+ │    │     ├──JobCard.css
+ │    └── loader
+ │       ├──Loader.jsx
+ │       ├──Loader.css
+ │
+ ├── pages/
+ │    ├── home
+ │    │     ├──Home.jsx
+ │    │     ├──Home.css
+ │    ├── job
+ │    │    ├──Jobs.jsx
+ │    │    ├──Jobs.css
+ │    └── about
+ │         ├──About.jsx
+ │         ├──About.css
+ │
+ ├── services/
+ │    └── jobService.js
+ │
+ ├── App.jsx
+ └── main.jsx
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## API Used
+Remotive Jobs API
+https://remotive.com/api/remote-jobs
+
+
+Installation & Setup
+# Clone the repository
+git clone <repo-link>
+
+# Navigate to project
+cd JobFinder
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
