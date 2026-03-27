@@ -1,8 +1,25 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Loader from "../../components/loader/Loader";
 import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    //  page loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show loader
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="home-container">
@@ -29,7 +46,10 @@ const Home = () => {
             Browse Jobs
           </button>
 
-          <button className="secondary-btn">
+          <button 
+            onClick={() => navigate("/about")}
+            className="secondary-btn"
+          >
             Learn More
           </button>
         </div>

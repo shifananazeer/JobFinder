@@ -1,0 +1,54 @@
+/* About.css */
+
+.about-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* Highlight brand */
+.about-highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 25px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+}

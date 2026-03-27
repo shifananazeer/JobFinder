@@ -1,24 +1,31 @@
 import { useEffect, useState } from "react";
 import JobCard from "../../components/jobcard/JobCard";
 import { fetchJobs } from "../../services/jobService";
+import Loader from "../../components/loader/Loader";
 import "./Job.css";
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
-    const getJobs = async () => {
+  const getJobs = async () => {
+    try {
       const data = await fetchJobs();
       setJobs(data);
-      setLoading(false);
-    };
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false); // stop loading after API finishes
+    }
+  };
 
-    getJobs();
-  }, []);
+  getJobs();
+}, []);
 
   if (loading) {
-    return <p className="loading-text">Loading jobs...</p>;
+ return <Loader />;
   }
 
   return (

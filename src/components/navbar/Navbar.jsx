@@ -18,6 +18,7 @@ const Navbar = () => {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/jobs">Jobs</Link>
+         <Link to="/about">About</Link>
       </div>
 
       {/* Right Buttons */}
