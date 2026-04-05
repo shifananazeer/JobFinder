@@ -16,7 +16,7 @@ const Navbar = () => {
 
       {/* CENTER LINKS */}
       <div className="nav-links">
-        <Link to="/">Find Jobs</Link>
+        <Link to="/">Home</Link>
         <Link to="/companies">Companies</Link>
         <Link to="/jobs">Jobs</Link>
         <Link to="/about">About</Link>
