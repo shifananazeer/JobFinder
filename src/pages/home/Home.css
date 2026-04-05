@@ -1,83 +1,234 @@
-/* Home.css */
-
-.home-container {
-  min-height: 100vh;
-  background: url("/hero.jpg") no-repeat center center/cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark overlay */
-.home-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* Content */
-.home-content {
-  position: relative;
-  text-align: center;
+/* MAIN */
+.home {
+  background: #0b0f1a;
   color: white;
-  padding: 20px;
-  max-width: 800px;
+  padding: 40px;
+  overflow-x: hidden;
 }
 
-.home-title {
-  font-size: 48px;
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 38px;
   font-weight: bold;
 }
 
-.home-desc {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #e5e7eb;
+.hero-left h1 span {
+  color: #00bfff;
 }
 
-.home-buttons {
-  margin-top: 25px;
+.hero-left h2 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.highlight {
+  color: #facc15;
+}
+
+.hero-left p {
+  margin: 15px 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 12px 18px;
+  background: #00bfff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.sub-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.sub-text span {
+  color: #facc15;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  flex: 1;
   display: flex;
   justify-content: center;
-  gap: 15px;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 700px;   /* ✅ big like screenshot */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* FEATURES */
+.features {
+  margin-top: 40px;
+}
+
+.features h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.features span {
+  color: #00bfff;
+}
+
+.feature-cards {
+  display: flex;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Buttons */
-.primary-btn {
-  background: #2563eb;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
+.card {
+  background: #1a1f2e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #22283a;
+}
+
+/* STEPS */
+.steps {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.steps h2 {
+  margin-bottom: 30px;
+}
+
+.step-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #1a1f2e;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.step.active {
+  border: 2px solid #00bfff;
+}
+
+/* CTA */
+.cta {
+  margin-top: 80px;
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: #e2e8f0;
+}
+
+.cta button {
+  margin-top: 20px;
+  padding: 12px 25px;
   border: none;
+  background: white;
+  color: black;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.primary-btn:hover {
-  background: #1d4ed8;
-}
+/* ===================== */
+/* 📱 RESPONSIVE DESIGN */
+/* ===================== */
 
-.secondary-btn {
-  border: 1px solid white;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/*  Responsive */
-@media (max-width: 768px) {
-  .home-title {
-    font-size: 32px;
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .home-desc {
-    font-size: 16px;
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+  }
+
+  .search-box {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .feature-cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
   }
 }

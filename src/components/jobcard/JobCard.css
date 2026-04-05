@@ -1,52 +1,50 @@
-/* JobCard.css */
-
+/* JOB CARD */
 .job-card {
-  background: #ffffff;
-  padding: 20px;
+  background: #e5e7eb; /* light grey like screenshot */
+  padding: 16px 18px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
 }
 
+/* HOVER EFFECT */
 .job-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+  background: #dfe3ea;
 }
 
+/* TITLE */
 .job-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1f2937;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
 }
 
-.job-company {
-  margin-top: 5px;
-  color: #6b7280;
-}
-
-.job-location {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #9ca3af;
-}
-
-.job-desc {
-  margin-top: 10px;
-  font-size: 14px;
+/* JOB INFO TEXT */
+.job-info {
+  font-size: 13px;
   color: #374151;
+  margin: 2px 0;
 }
 
-.apply-btn {
-  margin-top: 15px;
-  width: 100%;
-  background: #2563eb;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
+/* APPLY LINK */
+.apply-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.apply-btn:hover {
-  background: #1d4ed8;
+.apply-link:hover {
+  text-decoration: underline;
+}
+
+/* POSTED DATE */
+.posted-date {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 8px;
 }

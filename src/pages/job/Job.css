@@ -1,40 +1,106 @@
-/* Jobs.css */
-
-.jobs-container {
-  padding: 30px;
-  background: #f9fafb;
+/* PAGE BACKGROUND */
+.jobs-wrapper {
+  background: #f3f4f6;
   min-height: 100vh;
+  padding: 40px 20px;
 }
 
-.jobs-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+/* CONTAINER CARD */
+.jobs-wrapper {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.jobs-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.jobs-header p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 5px;
+  border-bottom: 2px solid #3b82f6;
+  display: inline-block;
+}
+
+/* PAGE BUTTON */
+.page-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* JOB LIST */
+.jobs-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* JOB CARD STYLE */
+.job-card {
+  background: #e5e7eb;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.job-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.job-info {
+  font-size: 13px;
+  color: #374151;
+  margin: 2px 0;
+}
+
+.apply-link {
+  color: #2563eb;
+  font-size: 13px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.posted-date {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+/* EMPTY TEXT */
+.no-jobs {
   text-align: center;
-  color: #111827;
+  color: gray;
 }
 
-.jobs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .jobs-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .jobs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-}
 
-@media (max-width: 768px) {
-  .jobs-grid {
-    grid-template-columns: 1fr;
+  .page-btn {
+    align-self: flex-end;
   }
-}
-
-.loading-text {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 18px;
 }
